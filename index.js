@@ -1,39 +1,97 @@
 //1
-let field1 = "текст один";
-let field2 = "щось друге";
+const temp = prompt("виведи 1  ,  2  ,  3");
 
-if (field1.trim() !== "" && field2.trim() !== "") {
-  console.log(" 1 Обидва поля заповнені");
-} else {
-  console.log(" 1 Не всі поля заповнені");
+switch ((Number, temp)) {
+  case "1":
+    console.log("Кава");
+
+    break;
+
+  case "2":
+    console.log("Чай");
+
+    break;
+
+  case "3":
+    console.log("Сік");
+    break;
+  default:
+    console.log("не то число");
 }
-
 //2
-let get1 = 4;
-let get2 = 4;
 
-if (get1 + get2 >= 10) {
-  console.log(" 2 Сума менша або дорівнює 10");
-} else {
-  console.log(" 2 Сума менша або дорівнює 10");
+const nices1 = prompt("напишіть від 1-7");
+
+switch (Number(nices1)) {
+  case 1:
+    console.log("понеділок");
+    break;
+  case 2:
+    console.log("вівторок");
+    break;
+  case 3:
+    console.log("середа");
+    break;
+  case 4:
+    console.log("чктвер");
+    break;
+  case 5:
+    console.log("пятниця");
+    break;
+  case 6:
+    console.log("субота");
+    break;
+  case 7:
+    console.log("неділя");
+    break;
+  default:
+    console.log("такого не існує ");
 }
 
 //3
-const roger = "javaReact";
 
-if (roger.includes("JavaScript")) {
-  console.log(" 3 Текст містить слово JavaScript");
+let age = prompt("скажи який зараз місяць року і я скаду тобі пору (року)");
+
+if (age < 2) {
+  console.log("зима");
+} else if (age < 5) {
+  console.log("весна");
+} else if (age < 8) {
+  console.log("літо(зараз)");
+} else if (age < 11) {
+  console.log("осінь");
+} else if (age === 12) {
+  console.log("зима");
 } else {
-  console.log(" 3 Текст не містить слово JavaScript");
+  console.log(" ви Пенсіонер (якщо навіть не можете сказати місяць року)");
 }
 
 //4
-let число = 15;
 
-if (число > 10 && число < 20) {
-  console.log(" 4 Число входить в діапазон від 10 до 20");
-} else {
-  console.log(" 4 Число не входить в діапазон від 10 до 20");
+const colorado = prompt("виведи green or yellow or red");
+
+switch (colorado) {
+  case "green":
+    console.log("Йди ато переїду тебе");
+
+    break;
+
+  case "yellow":
+    console.log("Готуйся");
+
+    break;
+
+  case "red":
+    console.log("Стій");
+    break;
+  default:
+    console.log("Невідомий ");
 }
 
-//5
+//5 ну я це завдання шось не дуже зрозумів як його робити
+let numbus = prompt("напишіть від 1-безкіннечності");
+if (numbus % 0) {
+  console.log("опа , попався , вам зауваження");
+} else {
+  console.log("сьогодні ваш день");
+}
