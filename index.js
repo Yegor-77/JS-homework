@@ -1,4 +1,5 @@
 //1
+/*
 const temp = prompt("виведи 1  ,  2  ,  3");
 
 switch ((Number, temp)) {
@@ -87,11 +88,38 @@ switch (colorado) {
   default:
     console.log("Невідомий ");
 }
-
+//
+// */
 //5 ну я це завдання шось не дуже зрозумів як його робити
-let numbus = prompt("напишіть від 1-безкіннечності");
-if (numbus % 0) {
-  console.log("опа , попався , вам зауваження");
-} else {
-  console.log("сьогодні ваш день");
+//
+let num1 = 10;
+let num2 = 5;
+let result;
+
+let operator = "-"; // '+', '-', '*', '/
+//створи код  який створює змінні для зберігання двох чисел і оператора ( + - * /), виконує обчислення та виводить результат. У разі ділення на нуль виводиться попередження
+
+switch (operator) {
+  case "+":
+    result = num1 + num2;
+    console.log(result);
+    break;
+  case "-":
+    result = num1 - num2;
+    console.log(result);
+    break;
+  case "*":
+    result = num1 * num2;
+    console.log(result);
+    break;
+  case "/":
+    if (num2 == 0) {
+      console.log("на нуль ділить не можна");
+    } else {
+      result = num1 / num2;
+      console.log(result);
+    }
+    break;
+  default:
+    console.log("помилка");
 }
