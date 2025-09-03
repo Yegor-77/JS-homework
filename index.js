@@ -1,52 +1,53 @@
-// 1
-let numbers1 = [1, 2, 3];
-numbers1[1] = 10;
-console.log("1:", numbers1);
+//
 
-// 2
-let strings1 = ["яблуко", "банан", "груша"];
-strings1.push("апельсин");
-console.log("2:", strings1);
+const numbers = [1, 5, 8, 12, 3, 15, 7, 20];
+const words = ["кіт", "собака", "миша", "папуга", "хомяк"];
 
-// 3
-let numbers2 = [4, 7, 2, 9];
-let sum = 0;
-for (let i = 0; i < numbers2.length; i++) {
-  sum += numbers2[i];
-}
-console.log("3: Сума =", sum);
-
-// 4
-let numbers3 = [5, 10, 15, 20, 25];
-console.log("4:");
-for (let i = 0; i < numbers3.length; i++) {
-  console.log(numbers3[i]);
+function countItems(array, condition) {
+  let count = 0;
+  for (const element of array) {
+    if (condition(element)) {
+      count++;
+    }
+  }
+  return count;
 }
 
-// 5
-let strings2 = ["сонце", "програмування", "кіт", "машина", "телефон"];
-console.log("5:");
-for (let i = 0; i < strings2.length; i++) {
-  if (strings2[i].length > 5) {
-    console.log(strings2[i]);
+const isEven = (num) => num % 2 === 0;
+const isLarge = (num) => num > 10;
+const isShort = (word) => word.length <= 3;
+
+console.log("Парних чисел:", countItems(numbers, isEven));
+console.log("Чисел більше 10:", countItems(numbers, isLarge));
+console.log("Коротких слів:", countItems(words, isShort));
+
+// 2 це я не дуже розумію як робити
+
+//3
+
+function repeatMessage(times, messageCreator) {
+  for (let i = 0; i < times; i++) {
+    if (condition(element)) {
+      messageCreator(i);
+    }
+  }
+  return count;
+}
+
+//4
+
+function processMovies(movies, action) {
+  for (let i = 0; i < movies.length; i++) {
+    action(movies[i], i);
   }
 }
 
-// 6
-let numbers4 = [3, 8, 12, 5, 22, 9, 1, 30, 15, 18];
-let max = numbers4[0];
-for (let i = 1; i < numbers4.length; i++) {
-  if (numbers4[i] > max) {
-    max = numbers4[i];
-  }
+function printMovie(movie, index) {
+  console.log(`${index + 1}. ${movie}`);
 }
-console.log("6: Максимальне =", max);
 
-// 7
-let numbers5 = [4, 7, 10, 13, 16, 21, 24, 28, 33, 40];
-console.log("7: Парні числа:");
-for (let i = 0; i < numbers5.length; i++) {
-  if (numbers5[i] % 2 === 0) {
-    console.log(numbers5[i]);
-  }
-}
+const movies = ["Inception", "Interstellar", "Matrix", "Avatar"];
+
+console.log();
+processMovies(movies, printMovie);
+//кажетца так це має бути
